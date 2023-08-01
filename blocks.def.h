@@ -2,7 +2,8 @@
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
 	{"Mem:", "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g",	30,		0},
-
+	{"", "block-battery.sh", 30, 0},
+	{"Vol:", "block-volume.sh", 0, 10},
 	{"", "date '+%b %d (%a) %I:%M%p'",					5,		0},
 };
 
